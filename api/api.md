@@ -104,3 +104,5 @@ Once you have set your token, try sending the GET request again. This time it sh
 These tokens expire after 24 hours, so remember to regenerate them periodically. You will need to set this token across all requests you wish to make in postman.
 
 If you have successfully make a request to the API using a valid token, then you have completed the setup.
+
+Please download the [Postman Collection](https://github.com/anthropology-inventory/docs/blob/main/api/Anthropology%20Inventory%20Management%20Software%20API.postman_collection.json) for ease of working with the API.
