@@ -6,7 +6,7 @@ It includes API documentation and setup guides to support ongoing development an
 
 ## Repository Contents
 
-- `api/` – API setup and endpoint documentation
+- `api/` – API setup and Postman Collection
 - `frontend/` – Setup instructions for the frontend
 
 ## About the Project
