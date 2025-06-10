@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "4a6f111b-2e40-4959-aaf2-4291ef192049",
+		"name": "Anthropology Inventory Management Software API",
+		"description": "This Postman collection contains a comprehensive set of requests designed to test the core API endpoints of our application. It covers typical CRUD operations, authentication flows, and error handling scenarios. The collection is organized by feature/module for easy navigation and is intended to support both manual testing during development and automated testing as part of CI workflows.\n\nUse this collection to verify that each endpoint behaves as expected under normal and edge-case conditions.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27922809"
+	},
+	"item": [
+		{
+			"name": "Specimens",
+			"item": [
+				{
+					"name": "Get all specimens",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								""
+							]
+						},
+						"description": "Gets all the specimens from the database."
+					},
+					"response": []
+				},
+				{
+					"name": "Get recent specimens",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/recent",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								"recent"
+							]
+						},
+						"description": "Gets the 5 most recently added specimens."
+					},
+					"response": []
+				},
+				{
+					"name": "Get specimen by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/<specimen_id>",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								"<specimen_id>"
+							]
+						},
+						"description": "Gets a single specimen by id."
+					},
+					"response": []
+				},
+				{
+					"name": "Add specimen - Taung child",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category",
+									"value": "Fossil",
+									"type": "text"
+								},
+								{
+									"key": "genus",
+									"value": "Australopithecus",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "africanus",
+									"type": "text"
+								},
+								{
+									"key": "nickName",
+									"value": "Taung Child",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "specimenId",
+									"value": "TC-1924",
+									"type": "text"
+								},
+								{
+									"key": "material",
+									"value": "Fossilized Skull and Endocast",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerId",
+									"value": "NA",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Natural Formation",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "countryManufactured",
+									"value": "NA",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "anthropologist",
+									"value": "Raymond Dart",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "activeValue",
+									"value": "20000",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "paidValue",
+									"value": "0",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "dateOfPurchase",
+									"value": "1924-11-28",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "purchaser",
+									"value": "University of the Witwatersrand",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "regionFound",
+									"value": "Southern Africa",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "countryFound",
+									"value": "South Africa",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Drawer 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "The fossilized skull of a juvenile Australopithecus africanus, discovered in 1924 in Taung, South Africa. It provided the first evidence of early human ancestors in Africa.",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "The Taung Child is estimated to be about 2.8 million years old. It has a combination of ape-like and human-like features, with a small brain size but evidence of bipedalism.",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "Optional - Upload a file from your computer. Accepted filetypes are: JPEG, JPG, PNG, WEBP",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								""
+							]
+						},
+						"description": "Adds a Taung child specimen to the database."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Specimen - Taung child",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"category\": \"Fossil\",\r\n    \"genus\": \"Australopithecus\",\r\n    \"species\": \"africanus\",\r\n    \"nickName\": \"Taung Child\",\r\n    \"specimenId\": \"TC-1924\",\r\n    \"material\": \"Fossilized Skull and Endocast\",\r\n    \"manufacturerId\": \"NA\",\r\n    \"manufacturer\": \"Natural Formation\",\r\n    \"countryManufactured\": \"NA\",\r\n    \"anthropologist\": \"Raymond Dart\",\r\n    \"activeValue\": 20000,\r\n    \"paidValue\": 0,\r\n    \"dateOfPurchase\": \"1924-11-28\",\r\n    \"purchaser\": \"University of the Witwatersrand\",\r\n    \"regionFound\": \"Southern Africa\",\r\n    \"countryFound\": \"South Africa\",\r\n    \"location\": \"Drawer 1\",\r\n    \"description\": \"The fossilized skull of a juvenile Australopithecus africanus, discovered in 1924 in Taung, South Africa. It provided the first evidence of early human ancestors in Africa.\",\r\n    \"notes\": \"The Taung Child is estimated to be about 2.8 million years old. It has a combination of ape-like and human-like features, with a small brain size but evidence of bipedalism.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/<specimen_id>",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								"<specimen_id>"
+							]
+						},
+						"description": "Updates a single specimen by id. Body is pre-filled with data for Taung child"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specimen by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/specimens/<specimen_id>",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"specimens",
+								"<specimen_id>"
+							]
+						},
+						"description": "Deletes a single specimen by id."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests to create, read, update, and delete specimens."
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"yourPassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/signup",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"signup"
+							]
+						},
+						"description": "Creates a new user account with the provided email and password."
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"yourPassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-849y.onrender.com/api/login",
+							"protocol": "https",
+							"host": [
+								"api-849y",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Logs the user into the user account with the provided email and password."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests to create and login users"
+		}
+	]
+}
